@@ -12,7 +12,7 @@ public class _01largestElementInArray {
         System.out.println(nums[nums.length-1]);
     }
 
-    private static int bruteforce(int[] nums) {
+    static int bruteforce(int[] nums) {
         int max=0;
         for(int i=0; i<nums.length; i++){
             if(nums[i]>max) max= nums[i];
