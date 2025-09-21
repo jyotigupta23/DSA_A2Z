@@ -1,0 +1,17 @@
+1) Decimal to binary
+2) Binary to Decimal
+1's Compliment
+2's Compliment
+
+Operators -
+and,  all 1,0 -> true, else false
+or, any one 1 -> true, else false
+xor, both different -> true, else false
+shift,  >> -> right, << -> left
+
+Negative numbers -> 31st bit is used to store Sign bit.
+Computer always stores the negative numbers in its 2s compliment format.
+
+Largest number ->    2^31 -1
+Smallest number ->   -2^31
+

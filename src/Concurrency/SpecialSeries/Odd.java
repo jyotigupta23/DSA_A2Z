@@ -1,0 +1,32 @@
+package Concurrency.SpecialSeries;
+
+public class Odd implements Runnable{
+    final Object lock;
+    public Odd( Object lock1) {
+        this.lock = lock1;
+    }
+
+    @Override
+    public void run() {
+        synchronized (lock){
+            while (Main.natNum <= Main.n){
+                while(!((Main.curr>0) && (Main.curr%2!=0))&&(Main.natNum <= Main.n) ){
+                    try {
+                        lock.wait();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+                if(Main.natNum > Main.n){
+                    lock.notifyAll();
+                    break;
+                }
+                System.out.println(Main.natNum);
+                Main.curr =0;
+                Main.natNum++;
+                lock.notifyAll();
+            }
+        }
+
+    }
+}

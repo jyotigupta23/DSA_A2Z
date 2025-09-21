@@ -1,4 +1,4 @@
-package Concurrency;
+package Concurrency.ConcurrencyFirst;
 
 public class Sequence implements Runnable {
     @Override

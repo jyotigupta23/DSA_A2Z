@@ -1,4 +1,4 @@
-package Concurrency;
+package Concurrency.ConcurrencyFirst;
 
 public class Main {
     public static void main(String[] args){
